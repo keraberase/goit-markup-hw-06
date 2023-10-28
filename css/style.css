@@ -86,7 +86,14 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
 }
+/* .open-mob-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+} */
 
 .menu-close-button {
   width: 24px;
@@ -127,7 +134,7 @@ img {
   flex-direction: column;
   gap: 40px;
   padding-top: 72px;
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 .mob-menu-link {
   color: #2e2f42;
@@ -166,10 +173,10 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mob-contact-link:hover {
-  color: #404bbf;
+  color: #4d5ae5;
 }
 .mob-contact-link:focus {
-  color: #404bbf;
+  color: #4d5ae5;
 }
 .mob-social-list {
   display: flex;
@@ -216,7 +223,7 @@ img {
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .main-page {
+  .basis {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -297,6 +304,7 @@ img {
   line-height: 1.1; /* 111.111% */
   letter-spacing: 0.02px;
   text-transform: capitalize;
+  margin-bottom: 8px;
 }
 .feauter-list-text {
   color: #434455;
@@ -794,11 +802,11 @@ img {
 .modal-form-item-text {
   margin-bottom: 16px;
 }
-.open-backdrop {
+/* .open-backdrop {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
+} */
 .modal-submit-button {
   display: block;
   min-width: 169px;
@@ -824,6 +832,10 @@ img {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .header-navigation {
     display: flex;
@@ -865,7 +877,7 @@ img {
     border-radius: 2px;
     background: #404bbf;
     left: 0;
-    bottom: -8px;
+    bottom: -12px;
   }
   .header-contact {
     display: flex;
@@ -875,7 +887,7 @@ img {
 
   .header-address-link {
     color: #434455;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-style: normal;
@@ -904,7 +916,7 @@ img {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .main-page {
+    .basis {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
@@ -942,7 +954,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
-    justify-content: center;
+    max-width: 550px;
   }
   .footer-logo {
     align-items: flex-start;
@@ -985,7 +997,10 @@ img {
   .current::after {
     content: "";
     position: absolute;
-    bottom: 5px;
+    bottom: -5px;
+  }
+  .header-address-link {
+    font-size: 16px;
   }
   .basis {
     padding-top: 188px;
@@ -995,11 +1010,12 @@ img {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/Dark-bg-min.jpg);
+    max-width: 1440px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .main-page {
+    .basis {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
